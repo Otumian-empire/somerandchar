@@ -2,7 +2,53 @@
 
 ## Install
 
+### clone
+
+`git clone https://github.com/Otumian-empire/somerandchar.git`
+
+### npm
+
+-
+
 ## Sample
+
+```javascript
+// Need 6 numbers for token - Alnum
+class Size6Alnum extends Alnum {
+    constructor(size) {
+        super().size = size
+    }
+}
+
+const size = 6
+
+const size6 = new Size6Alnum(size)
+const result = new RandomCharGenerator(size6)
+
+console.log(result.generateRandomChar())
+// 4Hn-eT
+// 1Uf0D-
+// X7cDNM
+// ZEnHVb
+// QDxO1q
+```
+
+```javascript
+// Need long random alphabetic string for email verication, as part of url - Alpha
+const longRandStr = new RandomCharGenerator(new Alpha())
+console.log(longRandStr.generateRandomChar())
+// -ILcOUfDzqzLzFtjWfgupdilsCTgHfhsBxckWokekH-LeAOoAiwmTgfjbLVaGzILEgVFQpTwivuJVaVOadKuQLwIJwPdUFiAKnQgkqXpASEIlzJhP_UL-jOuvmkCOtGj
+```
+
+```javascript
+// Need long alphanumeric characters as token for email verication - AlphaNum
+const result = new RandomCharGenerator(new AlphaNum())
+
+console.log(result.generateRandomChar())
+// tUwmZE7PU8UImjEtwHRGF5mG30F7c9jmHL_TnCOQ956Usw_FALQihABC0F9V11-T
+// DK3PCLtBEKS625KsONF064BRMxKCP-Qc7gMqRbH10dzITb5wtfT-_iW6qqEoqZTM
+// xoHkrxF7x1UHtK30bxZRI88oNouJnRzfq_Kj-shGbb8ffmxc5ls3IpvAUeRerLVm
+```
 
 ## Override
 
