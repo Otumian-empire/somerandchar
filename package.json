@@ -1,0 +1,26 @@
+{
+  "name": "somerandchar",
+  "version": "1.0.0",
+  "description": "somerandchar lets you generate random characters for your applications. Some random characters of customizable length. You can also choose from the character set to generate these desired random characters from.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Otumian-empire/somerandchar.git"
+  },
+  "keywords": [
+    "somerandchar",
+    "tokens",
+    "random",
+    "random-number-generators",
+    "customizable-random-char-gen"
+  ],
+  "author": "popecan1000@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Otumian-empire/somerandchar/issues"
+  },
+  "homepage": "https://github.com/Otumian-empire/somerandchar#readme"
+}

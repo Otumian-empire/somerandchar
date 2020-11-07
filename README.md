@@ -8,7 +8,7 @@
 
 ### npm
 
--
+`npm i somerandchar`
 
 ## Sample
 
