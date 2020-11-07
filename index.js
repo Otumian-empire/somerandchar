@@ -5,8 +5,7 @@ const ALPHANUM_CHAR_SET = ALPHA_CHAR_SET + ALNUM_CHAR_SET
 
 class Alnum {
     constructor() {
-        this.type = "alnum"
-        this.size = 6
+        this.size = 8
         this.char_set = ALNUM_CHAR_SET
     }
 }
@@ -22,7 +21,7 @@ class Alpha {
 
 class AlphaNum {
     constructor() {
-        this.size = 128
+        this.size = 64
         this.char_set = ALPHANUM_CHAR_SET
     }
 }
@@ -45,5 +44,6 @@ class RandomCharGenerator {
         return randChars
     }
 }
+
 
 module.exports = { Alnum, Alpha, AlphaNum, RandomCharGenerator }
