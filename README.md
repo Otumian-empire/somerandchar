@@ -26,11 +26,11 @@ const size6 = new Size6Alnum(size)
 const result = new RandomCharGenerator(size6)
 
 console.log(result.generateRandomChar())
-// 4Hn-eT
-// 1Uf0D-
-// X7cDNM
-// ZEnHVb
-// QDxO1q
+// 895208
+// 650209
+// 888880
+// 070770
+// 499237
 ```
 
 ```javascript
