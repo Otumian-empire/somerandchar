@@ -5,7 +5,7 @@
 ## Size and Char_set
 
 - `size`: the number of characters to be generated
-- `char_set`: the set of characters from which the random characters is generated from
+- `char_set`: the set of characters from which the random characters are generated from
 
 ## Alnum
 
@@ -13,7 +13,7 @@
 
 ## Alpha
 
-`Alpha` is a set of aphabetic characters from `[A-za-z]` including `-` and `_`. By default, returns 128 characters.
+`Alpha` is a set of aphabetic characters from `[A-za-z]` and includes, `-` and `_`. By default, returns 128 characters.
 
 ## AlphaNum
 
@@ -21,12 +21,12 @@
 
 ## RandomCharGenerator
 
-`RandomCharGenerator` has a constructor, which takes an `option` as argument. An `option` can be: `Alnum, Alpha, AlphaNum` and an `Object` of `size` and `char_set` properties.
+`RandomCharGenerator` has a constructor, which takes an `option` as argument. An `option` can be: `Alnum, Alpha, AlphaNum` or an `Object` of `size` and `char_set` properties.
 
 ## Style of import
 
-The CommonJs style of import is used.
+The CommonJs style of import is used. `const randCharGen = require("somerandchar");`
 
 ## Test
 
-`mocha`
+`mocha` is used for testing. Install `mocha` and run `npm run test`.
