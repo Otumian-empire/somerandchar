@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/Otumian-empire/somerandchar/issues"
   },
-  "homepage": "https://github.com/Otumian-empire/somerandchar#readme"
+  "homepage": "https://github.com/Otumian-empire/somerandchar#readme",
+  "dependencies": {
+    "npm": "^7.24.1"
+  }
 }
