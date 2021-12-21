@@ -1,8 +1,8 @@
 {
   "name": "somerandchar",
-  "version": "1.0.3",
+  "version": "2.0.1",
   "description": "somerandchar lets you generate random characters for your applications. You can generate some random characters of customizable length. You can also choose from the character set to generate these desired random characters from. The best part, somerandchar has no dependencies thus flexibly customizable.",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
     "test": "mocha"
   },
@@ -14,8 +14,7 @@
     "somerandchar",
     "tokens",
     "random",
-    "random-number-generators",
-    "customizable-random-char-gen"
+    "random-number-generators"
   ],
   "author": "popecan1000@gmail.com",
   "license": "ISC",
