@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/Otumian-empire/somerandchar#readme",
   "dependencies": {
+    "newman": "^5.3.0",
     "npm": "^7.24.1"
   }
 }
