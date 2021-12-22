@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/Otumian-empire/somerandchar.git"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/Otumian-empire"
+  },
   "keywords": [
     "somerandchar",
     "tokens",
