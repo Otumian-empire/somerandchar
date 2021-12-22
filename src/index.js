@@ -10,7 +10,12 @@ class Generator {
   }
 
   toString() {
+    if (!this._charSet || this._size < 1) {
+      return "";
+    }
+
     let randChars = "";
+
     const rangeConstant = this._charSet.length;
 
     for (let i = 0; i < this._size; i++) {
@@ -41,7 +46,7 @@ class Builder {
     return this;
   }
 
-  customSet(charSet) {
+  customSet(charSet = "") {
     this.randGen._charSet = charSet;
     return this;
   }
@@ -56,4 +61,4 @@ class Builder {
   }
 }
 
-module.exports = { builder: new Builder() };
+module.exports = new Builder();

@@ -17,103 +17,64 @@ somerandchar lets you generate random characters for your applications. You can 
 ### Generate X numbers for token
 
 ```javascript
-// Need 6 numbers for token - Alnum
+// Need 6 numbers for token
+const somerandchar = require("somerandchar");
 
-const { Alnum, RandomCharGenerator } = require("somerandchar");
-
-// Extend the Alnum class and override the size attribute
-class Size6Alnum extends Alnum {
-  constructor(size) {
-    super().size = size; // could be passed directly
-  }
-}
-
-// create an instance of the Extended class - Size6Alnum
-const size = 6;
-const size6 = new Size6Alnum(size);
-
-// create instance of RandomCharGenerator and call it's generateRandomChar()
-const result = new RandomCharGenerator(size6);
-console.log(result.generateRandomChar());
+// call the size method and pass the designed size as integer
+// call the alnum method to numeric characters
+// call the toString method to return the token
+const result = somerandchar.size(6).alnum().toString();
+console.log(result);
 
 // 895208
 // 650209
 // 888880
-// 070770
-// 499237
 ```
 
-### Generate long random alphabetic string for email verication
+### Generate long random alphabetic string for email verification
 
 ```javascript
-// Need long random alphabetic string for email verication,
-// as part of url - Alpha returns 128 characters
+// Need long random alphabetic string for email verification,
+// as part of url
+// call alpha method and pass 128 to the size method
+const somerandchar = require("somerandchar");
 
-const { Alpha, RandomCharGenerator } = require("somerandchar");
+const result = somerandchar.size(128).alpha().toString();
+console.log(result);
 
-const longRandStr = new RandomCharGenerator(new Alpha());
-console.log(longRandStr.generateRandomChar());
-
-// -ILcOUfDzqzLzFtjWfgupdilsCTgHfhsBxckWokekH-LeAOoAiwmTgfjbLVaGzILEgVFQpTwivuJVaVOadKuQLwIJwPdUFiAKnQgkqXpASEIlzJhP_UL-jOuvmkCOtGj
+//xtXFwErgKznP_ijDuhuwgsrkeolqxjKOPqXtrUgskiBWuMpTodMrRjTkqRlEaqWibpcAtFkt_VVHCZuAqncKwthUtvK_kRmzFPRkAVo_noPNo-WQxipikVxZzFTvxevm
 ```
 
-### Generate long random alphanumeric string for email verication
+### Generate long random alphanumeric string for email verification
 
 ```javascript
-// Need long alphanumeric characters as token for email verication,
-// as part of url - AlphaNum returns 64 characters
+// Need long alphanumeric characters as token for email verification,
+// as part of url - call alphanum and pass 64 to the size method
+const somerandchar = require("somerandchar");
 
-const { AlphaNum, RandomCharGenerator } = require("somerandchar");
-
-const result = new RandomCharGenerator(new AlphaNum());
-
-console.log(result.generateRandomChar());
-
-// tUwmZE7PU8UImjEtwHRGF5mG30F7c9jmHL_TnCOQ956Usw_FALQihABC0F9V11-T
-// DK3PCLtBEKS625KsONF064BRMxKCP-Qc7gMqRbH10dzITb5wtfT-_iW6qqEoqZTM
-// xoHkrxF7x1UHtK30bxZRI88oNouJnRzfq_Kj-shGbb8ffmxc5ls3IpvAUeRerLVm
-```
-
-## Modify the internals of somerandchar
-
-### Override a sample class
-
-> super().char_set = "some string character set of your choice"
-
-```javascript
-class CustomAlnum extends Alnum {
-  constructor(size) {
-    super().size = size;
-  }
-}
-
-const size = 128;
-
-const customAlnum = new CustomAlnum(size);
-const randCharGen = new RandomCharGenerator(customAlnum);
-
-const result = randCharGen.generateRandomChar();
+const result = somerandchar.alphanum().size(64).toString();
 
 console.log(result);
 
-// 71008276754097452371346850771953727143571590264375932186817824239670462309173275913598287285550337958838560274112638134932579800
+// lpQRGXWKmvN9DnCTRIgIcSPWWlm5SWgsTn_-rlfufMpTdadp3CveOsR9dULu2ZFd
+// B5V_mijVumPf-62gVo6LIqx2UfQ8M7XEJKhAguDG6Xes5-81gXCJzSmhNg72cQ30
 ```
 
-### Pass an obejct of size and char_set instead of extending a class
+## Customize somerandchar - With some other character sets
+
+Pass a string to the `customSet` method any a preferred size, `n` to the `size` method.
 
 ```javascript
+const somerandchar = require("somerandchar");
+
 const size = 16;
-const char_set =
+const charSet =
   "johnDOEu997uwt0tq5--z_(hz5m)un(7jp68(3)htuwlh__-psq5w1pDAnceMoney";
 
-const option = { size, char_set };
-const randCharGen = new RandomCharGenerator(option);
-
-const result = randCharGen.generateRandomChar();
+const result = somerandchar.customSet(charSet).size(size).toString();
 
 console.log(result);
 
-// qt(mD(Mm_5chAt8D
-// psyA9_qEn7p756on
-// q__39h5no-j_6t7M
+// tsn_oqc_8tDup7Aj
+// _w(59oD0pp190-ut
 ```
