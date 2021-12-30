@@ -1,6 +1,6 @@
 {
   "name": "somerandchar",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "somerandchar lets you generate random characters for your applications. You can generate some random characters of customizable length. You can also choose from the character set to generate these desired random characters from. The best part, somerandchar has no dependencies thus flexibly customizable.",
   "main": "./src/index.js",
   "scripts": {
