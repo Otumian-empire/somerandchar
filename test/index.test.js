@@ -3,58 +3,51 @@ const somerandchar = require("../src");
 const assert = require("assert");
 
 describe("Test Default `somerandchar`", () => {
-  beforeEach(() => {
-    somerandchar.size(6);
-  });
-
+  const builder = new somerandchar();
   it("returns 6 characters when charset and size is not passed", () => {
     const EXPECTED_SIZE = 6;
 
-    assert.strictEqual(somerandchar.toString().length, EXPECTED_SIZE);
+    assert.strictEqual(builder.toString().length, EXPECTED_SIZE);
   });
 });
 
 describe("Test `somerandchar` with size = 16", () => {
-  beforeEach(() => {
-    somerandchar.size(6);
-  });
+  const builder = new somerandchar();
 
   const PASSED_SIZE = 16;
   const EXPECTED_SIZE = 16;
 
   it("returns 16 characters when alnum method is called", () => {
     assert.strictEqual(
-      somerandchar.size(PASSED_SIZE).alnum().toString().length,
+      builder.size(PASSED_SIZE).alnum().toString().length,
       EXPECTED_SIZE
     );
   });
 
   it("returns 16 characters when alpha method is called", () => {
     assert.strictEqual(
-      somerandchar.size(PASSED_SIZE).alpha().toString().length,
+      builder.size(PASSED_SIZE).alpha().toString().length,
       EXPECTED_SIZE
     );
   });
 
   it("returns 16 characters when alphanum method is called", () => {
     assert.strictEqual(
-      somerandchar.size(PASSED_SIZE).alphanum().toString().length,
+      builder.size(PASSED_SIZE).alphanum().toString().length,
       EXPECTED_SIZE
     );
   });
 });
 
 describe("Test `somerandchar` with diversity", () => {
-  beforeEach(() => {
-    somerandchar.size(6);
-  });
+  const builder = new somerandchar();
 
   it("returns empty string when empty custom charset is passed", () => {
     const EXPECTED_SIZE = 0;
     const PASSED_CHAR_SET = "";
 
     assert.strictEqual(
-      somerandchar.customSet(PASSED_CHAR_SET).toString().length,
+      builder.customSet(PASSED_CHAR_SET).toString().length,
       EXPECTED_SIZE
     );
   });
@@ -64,7 +57,7 @@ describe("Test `somerandchar` with diversity", () => {
     const CUSTOM_SIZE = 0;
 
     assert.strictEqual(
-      somerandchar.size(CUSTOM_SIZE).toString().length,
+      builder.size(CUSTOM_SIZE).toString().length,
       EXPECTED_SIZE
     );
   });
@@ -74,7 +67,7 @@ describe("Test `somerandchar` with diversity", () => {
     const CUSTOM_SIZE = -5;
 
     assert.strictEqual(
-      somerandchar.size(CUSTOM_SIZE).toString().length,
+      builder.size(CUSTOM_SIZE).toString().length,
       EXPECTED_SIZE
     );
   });
@@ -84,7 +77,7 @@ describe("Test `somerandchar` with diversity", () => {
     const EXPECTED_SIZE = 128;
 
     assert.strictEqual(
-      somerandchar.size(CUSTOM_SIZE).alpha().toString().length,
+      builder.size(CUSTOM_SIZE).alpha().toString().length,
       EXPECTED_SIZE
     );
   });
@@ -94,16 +87,14 @@ describe("Test `somerandchar` with diversity", () => {
     const EXPECTED_SIZE = 64;
 
     assert.strictEqual(
-      somerandchar.size(CUSTOM_SIZE).alphanum().toString().length,
+      builder.size(CUSTOM_SIZE).alphanum().toString().length,
       EXPECTED_SIZE
     );
   });
 });
 
 describe("Test `somerandchar` with custom charset and size", () => {
-  beforeEach(() => {
-    somerandchar.size(6);
-  });
+  const builder = new somerandchar();
 
   it("returns 13 characters when custom charset `SsOoMmEeRrAnNnDdCcHhAarR-_0` size = 13 is passed", () => {
     const CUSTOM_SIZE = 13;
@@ -111,24 +102,20 @@ describe("Test `somerandchar` with custom charset and size", () => {
     const EXPECTED_SIZE = 13;
 
     assert.strictEqual(
-      somerandchar.customSet(CUSTOM_CHAR_SET).size(CUSTOM_SIZE).toString()
-        .length,
+      builder.customSet(CUSTOM_CHAR_SET).size(CUSTOM_SIZE).toString().length,
       EXPECTED_SIZE
     );
   });
 });
 
 describe("Test `somerandchar` with repeated custom charset and not calling size method", () => {
-  beforeEach(() => {
-    somerandchar.size(6);
-  });
-
+  const builder = new somerandchar();
   it("returns 6 characters when `AAA` is passed to customSet method", () => {
     const CUSTOM_CHAR_SET = "AAA";
     const EXPECTED_SIZE = 6;
 
     assert.strictEqual(
-      somerandchar.customSet(CUSTOM_CHAR_SET).toString().length,
+      builder.customSet(CUSTOM_CHAR_SET).toString().length,
       EXPECTED_SIZE
     );
   });
@@ -138,7 +125,7 @@ describe("Test `somerandchar` with repeated custom charset and not calling size 
     const EXPECTED_CHAR_SET = "AAAAAA";
 
     assert.strictEqual(
-      somerandchar.customSet(CUSTOM_CHAR_SET).toString(),
+      builder.customSet(CUSTOM_CHAR_SET).toString(),
       EXPECTED_CHAR_SET
     );
   });

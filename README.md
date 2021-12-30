@@ -19,11 +19,12 @@ somerandchar lets you generate random characters for your applications. You can 
 ```javascript
 // Need 6 numbers for token
 const somerandchar = require("somerandchar");
+const builder = new somerandchar();
 
 // call the size method and pass the designed size as integer
 // call the alnum method to numeric characters
 // call the toString method to return the token
-const result = somerandchar.size(6).alnum().toString();
+const result = builder.size(6).alnum().toString();
 console.log(result);
 
 // 895208
@@ -38,8 +39,9 @@ console.log(result);
 // as part of url
 // call alpha method and pass 128 to the size method
 const somerandchar = require("somerandchar");
+const builder = new somerandchar();
 
-const result = somerandchar.size(128).alpha().toString();
+const result = builder.size(128).alpha().toString();
 console.log(result);
 
 //xtXFwErgKznP_ijDuhuwgsrkeolqxjKOPqXtrUgskiBWuMpTodMrRjTkqRlEaqWibpcAtFkt_VVHCZuAqncKwthUtvK_kRmzFPRkAVo_noPNo-WQxipikVxZzFTvxevm
@@ -51,8 +53,9 @@ console.log(result);
 // Need long alphanumeric characters as token for email verification,
 // as part of url - call alphanum and pass 64 to the size method
 const somerandchar = require("somerandchar");
+const builder = new somerandchar();
 
-const result = somerandchar.alphanum().size(64).toString();
+const result = builder.alphanum().size(64).toString();
 
 console.log(result);
 
@@ -66,12 +69,13 @@ Pass a string to the `customSet` method any a preferred size, `n` to the `size` 
 
 ```javascript
 const somerandchar = require("somerandchar");
+const builder = new somerandchar();
 
 const size = 16;
 const charSet =
   "johnDOEu997uwt0tq5--z_(hz5m)un(7jp68(3)htuwlh__-psq5w1pDAnceMoney";
 
-const result = somerandchar.customSet(charSet).size(size).toString();
+const result = builder.customSet(charSet).size(size).toString();
 
 console.log(result);
 

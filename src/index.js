@@ -61,4 +61,4 @@ class Builder {
   }
 }
 
-module.exports = new Builder();
+module.exports = Builder;
