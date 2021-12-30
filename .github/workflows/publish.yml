@@ -1,20 +1,19 @@
-name: publish
+name: Publish
 on:
   push:
     tags:
-      - "v[0-9]+.[0-9]+.[0-9]+*"
+      - v*.*.*
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@master
       - uses: actions/setup-node@v2
         with:
-          node-version: 14
-          registry-url: "https://registry.npmjs.org"
-      - run: npm i
-      - run: npm ci
-      - run: npm publish
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - run: yarn
+      - run: yarn publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
 # https://hackernoon.com/publish-npm-packages-using-github-actions-a-how-to-guide-q31c34fg
