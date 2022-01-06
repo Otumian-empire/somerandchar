@@ -12,8 +12,17 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-      - run: yarn
+      - run: yarn install
       - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-node@v2
+          registry-url: 'https://registry.npmjs.org'
+        with:
+          node-version: 12
+      - run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          
+# https://github.com/actions/setup-node/blob/main/docs/advanced-usage.md#publish-to-npmjs-and-gpr-with-yarn
 # https://hackernoon.com/publish-npm-packages-using-github-actions-a-how-to-guide-q31c34fg
