@@ -1,5 +1,5 @@
 {
-  "name": "somerandchar",
+  "name": "@otumian-empire/somerandchar",
   "version": "3.0.0",
   "description": "somerandchar lets you generate random characters for your applications. You can generate some random characters of customizable length. You can also choose from the character set to generate these desired random characters from. The best part, somerandchar has no dependencies thus flexibly customizable.",
   "main": "./src/index.js",
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/Otumian-empire/somerandchar.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/Otumian-empire"
+    "registry": "https://npm.pkg.github.com/"
   },
   "keywords": [
     "somerandchar",
