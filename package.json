@@ -24,5 +24,8 @@
   "homepage": "https://github.com/Otumian-empire/somerandchar#readme",
   "dependencies": {
     "npm": "^7.24.1"
+  },
+  "directories": {
+    "test": "test"
   }
 }
