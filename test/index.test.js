@@ -4,6 +4,7 @@ const assert = require("assert");
 
 describe("Test Default `somerandchar`", () => {
   const builder = new somerandchar();
+
   it("returns 6 characters when charset and size is not passed", () => {
     const EXPECTED_SIZE = 6;
 

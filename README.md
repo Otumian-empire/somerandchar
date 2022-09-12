@@ -84,3 +84,8 @@ console.log(result);
 // tsn_oqc_8tDup7Aj
 // _w(59oD0pp190-ut
 ```
+
+## NOTE
+
+- The other in which `size` and, `customSet`, `alphanum`, `alpha` or `alnum` is called does not affect the output.
+- As mentioned or demonstrated, when size is not called the default value of `size` is `6` and when neither `customSet`, `alphanum`, `alpha` nor `alnum` is called, the default character set used is `alnum`.

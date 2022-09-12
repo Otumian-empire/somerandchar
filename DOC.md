@@ -4,16 +4,18 @@
 
 - `Generator` with a `toString` method
 - `Builder` with with methods, `alnum`, `alpha`, `alphanum`, `customSet`, `size`, and `toString`.
+- If a method is not mentioned, then it is an internal method.
 
-`somerandchar` now uses the Builder Design Pattern [[0]][wiki-builder-pattern] [[1]][geeks-builder-pattern] [[2]][jsmanifest-builder-pattern] so that instead of creating new instance of `Alnum, Alpha and AlphaNum` class we call/chain `alnum, alpha and alphanum` methods.
+`somerandchar` now uses the Builder Design Pattern [[0]][wiki-builder-pattern] [[1]][geeks-builder-pattern] [[2]][jsmanifest-builder-pattern] so that instead of creating new instance of `Alnum, Alpha and AlphaNum` class, we create an instance of the builder class when we require `somerandchar` then we can call/chain `alnum, alpha and alphanum` methods.
 
 `somerandchar` is now,
 
 ```js
 // Need 6 numbers for token - Alnum
 const somerandchar = require("somerandchar");
+const builder = new somerandchar();
 
-const randChar = somerandchar.alnum().toString();
+const randChar = builder.size(6).alnum().toString();
 
 console.log(randChar);
 
@@ -53,11 +55,11 @@ console.log(result.generateRandomChar());
 // 499237
 ```
 
-The same functionality everywhere but less code. `generateRandomChar` is now called by the `toString` method, which returns the string desired.
+The same functionality everywhere but less code. `generateRandomChar` is now called by the `toString` method, which returns the string desired. Check the [README.md](./README.md) for more examples.
 
 ## By Default
 
-By default, `somerandchar.toString()` returns 6 characters numerical characters.
+By default, when we require `somerandchar`, the builder instance returns 6 numerical characters when the `toString()` methods is called.
 
 ## alnum()
 
@@ -71,17 +73,17 @@ By default, `somerandchar.toString()` returns 6 characters numerical characters.
 
 `alphanum()`sets the character set to numeric and alphabetic characters, including, `_` and `-`.
 
-## customSet()
+## customSet(str)
 
-`customSet(s)`, where is some string, receives a string argument as the character set to generate the random characters from.
+`customSet(str)`, where `str` is some string, receives a string argument as the character set to generate the random characters from.
 
 ## size(n)
 
-`size(n)` sets the number of characters to be returned.
+`size(num)`, where `num` is an integer, sets the number of characters to be returned.
 
 ## toString()
 
-`toString()`returns a string of the desire character set and size.
+`toString()`, returns a string of the desire character set and size.
 
 ## Style of import
 
@@ -89,7 +91,7 @@ The CommonJs style of import is used. `const somerandchar = require("somerandcha
 
 ## Test
 
-`mocha` is used for testing. Install `mocha` and run `npm run test`.
+`mocha` is used for testing. Install `mocha` and run `npm test` or `npm run test`. Either works.
 
 #
 
