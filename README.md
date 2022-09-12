@@ -1,6 +1,6 @@
 # somerandchar
 
-[![Publish](https://github.com/Otumian-empire/somerandchar/actions/workflows/publish.yml/badge.svg)](https://github.com/Otumian-empire/somerandchar/actions/workflows/publish.yml)
+<!-- [![Publish](https://github.com/Otumian-empire/somerandchar/actions/workflows/publish.yml/badge.svg)](https://github.com/Otumian-empire/somerandchar/actions/workflows/publish.yml) -->
 
 somerandchar lets you generate random characters for your applications. You can generate some random characters of customizable length. You can also choose from the character set to generate these desired random characters from. The best part, somerandchar has no dependencies thus flexibly customizable.
 
@@ -12,7 +12,7 @@ somerandchar lets you generate random characters for your applications. You can 
 
 ### npm
 
-`npm i somerandchar`
+`npm i @otumian-empire/somerandchar`
 
 ## Usage
 
