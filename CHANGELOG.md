@@ -9,3 +9,4 @@
 - update [README.md](./README.md)
 - update [DOC.md](./DOC.md)
 - add a changelog file
+- add example folder
