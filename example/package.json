@@ -1,0 +1,16 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "using somerandchar to generate random characters",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon"
+  },
+  "author": "popecan1000@gmaill.com",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@otumian-empire/somerandchar": "^3.0.2"
+  }
+}
