@@ -1,0 +1,44 @@
+Arguments: 
+  /home/otumian/.nvm/versions/node/v16.15.0/bin/node /home/otumian/.nvm/versions/node/v16.15.0/bin/yarn add @tumian-empire/somerandchar
+
+PATH: 
+  /home/otumian/.local/bin:/home/otumian/.nvm/versions/node/v16.15.0/bin:/home/otumian/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/otumian/Android/Sdk/emulator:/home/otumian/Android/Sdk/tools:/home/otumian/Android/Sdk/tools/bin:/home/otumian/Android/Sdk/platform-tools:/opt/lampp/bin/:/home/otumian/javafx-sdk-18.0.1/lib:/home/otumian/julia-1.7.3/bin:/home/otumian/redis-stable/src:/home/otumian/redis-insight:/home/otumian/Android/Sdk/emulator:/home/otumian/Android/Sdk/tools:/home/otumian/Android/Sdk/tools/bin:/home/otumian/Android/Sdk/platform-tools:/opt/lampp/bin/:/home/otumian/javafx-sdk-18.0.1/lib:/home/otumian/julia-1.7.3/bin:/home/otumian/redis-stable/src:/home/otumian/redis-insight:/home/otumian/Android/Sdk/emulator:/home/otumian/Android/Sdk/tools:/home/otumian/Android/Sdk/tools/bin:/home/otumian/Android/Sdk/platform-tools:/opt/lampp/bin/:/home/otumian/javafx-sdk-18.0.1/lib:/home/otumian/julia-1.7.3/bin:/home/otumian/redis-stable/src:/home/otumian/redis-insight:/home/otumian/Android/Sdk/emulator:/home/otumian/Android/Sdk/tools:/home/otumian/Android/Sdk/tools/bin:/home/otumian/Android/Sdk/platform-tools:/opt/lampp/bin/:/home/otumian/javafx-sdk-18.0.1/lib:/home/otumian/julia-1.7.3/bin:/home/otumian/redis-stable/src:/home/otumian/redis-insight:/home/otumian/Android/Sdk/emulator:/home/otumian/Android/Sdk/tools:/home/otumian/Android/Sdk/tools/bin:/home/otumian/Android/Sdk/platform-tools:/opt/lampp/bin/:/home/otumian/javafx-sdk-18.0.1/lib:/home/otumian/julia-1.7.3/bin:/home/otumian/redis-stable/src:/home/otumian/redis-insight
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.15.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@tumian-empire%2fsomerandchar: Not found
+      at Request.params.callback [as _callback] (/home/otumian/.nvm/versions/node/v16.15.0/lib/node_modules/yarn/lib/cli.js:66145:18)
+      at Request.self.callback (/home/otumian/.nvm/versions/node/v16.15.0/lib/node_modules/yarn/lib/cli.js:140890:22)
+      at Request.emit (node:events:527:28)
+      at Request.<anonymous> (/home/otumian/.nvm/versions/node/v16.15.0/lib/node_modules/yarn/lib/cli.js:141862:10)
+      at Request.emit (node:events:527:28)
+      at IncomingMessage.<anonymous> (/home/otumian/.nvm/versions/node/v16.15.0/lib/node_modules/yarn/lib/cli.js:141784:12)
+      at Object.onceWrapper (node:events:641:28)
+      at IncomingMessage.emit (node:events:539:35)
+      at endReadableNT (node:internal/streams/readable:1345:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+
+npm manifest: 
+  {
+    "name": "example",
+    "version": "1.0.0",
+    "description": "using somerandchar to generate random characters",
+    "main": "index.js",
+    "author": "popecan1000@gmaill.com",
+    "license": "MIT",
+    "private": false
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
